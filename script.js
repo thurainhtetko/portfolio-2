@@ -98,9 +98,14 @@ document.addEventListener("DOMContentLoaded", function () {
   html += '<div class="nav-links">';
   html += '<button class="nav-btn" data-target="work">work</button>';
   html += '<button class="nav-btn" data-target="stack">stack</button>';
+  html += '<button class="nav-btn" data-target="experience">experience</button>';
   html += '<button class="nav-btn" data-target="about">about</button>';
   html += '<button class="nav-btn" data-target="contact">contact</button>';
-  html += "</div></div></nav>";
+  html += "</div>";
+  html += '<button class="nav-toggle" aria-label="toggle menu" aria-expanded="false">';
+  html += "<span></span><span></span><span></span>";
+  html += "</button>";
+  html += "</div></nav>";
 
   html += '<section class="hero">';
   html += '<div class="hero-grid">';
@@ -153,10 +158,11 @@ document.addEventListener("DOMContentLoaded", function () {
     html += "</div></div>";
   });
   html += "</div>";
-  html += "</div>";
+  html += "</div></section>";
 
+  html += '<section id="experience" class="section">';
+  html += '<div class="section-head"><span class="section-num">[03]</span><h2>Experience</h2></div>';
   html += '<div class="experience">';
-  html += '<p class="experience-title">Experience</p>';
   experience.forEach(function (e) {
     html += '<div class="exp-row">';
     html += '<span class="exp-period">' + e.period + "</span>";
@@ -168,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
   html += "</div></section>";
 
   html += '<section id="about" class="section">';
-  html += '<div class="section-head"><span class="section-num">[03]</span><h2>About</h2></div>';
+  html += '<div class="section-head"><span class="section-num">[04]</span><h2>About</h2></div>';
   html += '<div class="about-grid">';
   html += '<div class="about-text">';
   html += "<p>I've been studying and building software with experience in web and mobile development. I work with technologies such as PHP, C#, Flutter, Blazor, Firebase, MySQL, and JavaScript. I enjoy building practical applications and learning how different technologies work together.</p>";
@@ -182,7 +188,7 @@ document.addEventListener("DOMContentLoaded", function () {
   html += "</div></div></section>";
 
   html += '<section id="contact" class="section">';
-  html += '<div class="section-head"><span class="section-num">[04]</span><h2>Contact</h2></div>';
+  html += '<div class="section-head"><span class="section-num">[05]</span><h2>Contact</h2></div>';
   html += '<div class="contact-grid">';
   html += '<div class="contact-left">';
   html += '<h3 class="contact-heading">LET\'S BUILD<br/>SOMETHING.</h3>';
@@ -201,8 +207,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   root.innerHTML = html;
 
+  var navToggle = document.querySelector(".nav-toggle");
+  var navLinks = document.querySelector(".nav-links");
+
+  function closeMenu() {
+    navLinks.classList.remove("open");
+    navToggle.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+
+  navToggle.addEventListener("click", function () {
+    var isOpen = navLinks.classList.toggle("open");
+    navToggle.classList.toggle("open", isOpen);
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest("nav") && navLinks.classList.contains("open")) {
+      closeMenu();
+    }
+  });
+
   document.querySelectorAll(".nav-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
+      closeMenu();
       var target = document.getElementById(this.getAttribute("data-target"));
       if (target) {
         target.scrollIntoView({ behavior: "smooth" });
