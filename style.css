@@ -7,21 +7,21 @@
 }
 
 :root {
-  --bg: #0e0d0c;
-  --bg-surface: #131110;
-  --text-primary: #ece8e3;
-  --text-secondary: #cdc8c3;
-  --text-muted: #6b6663;
-  --text-dim: #4a4846;
-  --text-body: #9a9490;
-  --text-desc: #7a7470;
-  --accent: #9dff8a;
-  --border: #3a3633;
-  --border-light: #3f3a37;
-  --border-hover: #5a5550;
+  --bg: #131010;
+  --bg-surface: #1b1818;
+  --text-primary: #f2eded;
+  --text-secondary: #b8b2b2;
+  --text-muted: #807b7b;
+  --text-dim: #4a4747;
+  --text-body: #b8b2b2;
+  --text-desc: #807b7b;
+  --accent: #03b000;
+  --border: #4a4747;
+  --border-light: #3c3838;
+  --border-hover: #6f6a69;
   --border-faint: rgba(255, 255, 255, 0.04);
-  --nav-bg: #0e0d0c;
-  --scrollbar: #3a3633;
+  --nav-bg: #131010;
+  --scrollbar: #3c3838;
   --doodle-opacity: 0.9;
   --doodle-filter: invert(1) sepia(1) saturate(2) hue-rotate(60deg) brightness(0.7);
 }
