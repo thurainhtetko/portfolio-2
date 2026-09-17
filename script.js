@@ -115,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
   html += '<div class="hero-bio">';
   html +=
     "<p>I build scalable mobile and web applications and occasional games. Based in Mandalay, Myanmar.</p>";
-  html += '<a href="./cv.html" download class="cv-btn">' + downloadSvg + "Download CV</a>";
+  html += '<a href="./cv.pdf" target="_blank" download class="cv-btn">' + downloadSvg + "Download CV</a>";
   html += "</div></div>";
   html += '<div class="hero-right">';
   html += getDoodleImg("sitting-reading", "illustrated figure sitting and reading", "doodle");
