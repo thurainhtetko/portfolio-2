@@ -85,8 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
       alt +
       '" class="' +
       cls +
-      '" src="https://opendoodles.s3-us-west-1.amazonaws.com/' +
-      name +
+      '" src="doodle' +
       '.svg"/>'
     );
   }
