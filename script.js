@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var html = "";
 
   html += '<nav><div class="nav-inner">';
-  html += '<span class="nav-logo">thurainhtetko<span class="accent">_</span></span>';
+  html += '<span class="nav-logo" onclick=changeTheme();>thurainhtetko<span class="accent">_</span></span>';
   html += '<div class="nav-links">';
   html += '<button class="nav-btn" data-target="work">work</button>';
   html += '<button class="nav-btn" data-target="stack">stack</button>';
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
   html += "</div></div></section>";
 
   html += "<footer>";
-  html += '<span>Ac 2026 thurain htet ko</span>';
+  html += '<span>This is the end :)</span>';
   html += '<span>works on my machine</span>';
   html += "</footer>";
 
@@ -214,7 +214,9 @@ document.addEventListener("DOMContentLoaded", function () {
     navToggle.classList.remove("open");
     navToggle.setAttribute("aria-expanded", "false");
   }
+  function changeTheme(){
 
+  }
   navToggle.addEventListener("click", function () {
     var isOpen = navLinks.classList.toggle("open");
     navToggle.classList.toggle("open", isOpen);
