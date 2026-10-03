@@ -12,7 +12,7 @@
   --text-primary: #f2eded;
   --text-secondary: #b8b2b2;
   --text-muted: #807b7b;
-  --text-dim: #4a4747;
+  --text-dim: #a4a4a4;
   --text-body: #b8b2b2;
   --text-desc: #807b7b;
   --accent: #03b000;
@@ -372,7 +372,7 @@ nav {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.9375rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--text-dim);
 }
 
 .project-desc {
@@ -417,7 +417,7 @@ nav {
 }
 
 .status-active {
-  color: var(--accent);
+  /* color: var(--accent); */
 }
 
 .status-stable {
@@ -625,7 +625,7 @@ nav {
 .cl-label {
   font-family: "JetBrains Mono", monospace;
   font-size: 0.6875rem;
-  color: var(--text-dim);
+  color: var(--accent);
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
